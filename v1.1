@@ -1,0 +1,17 @@
+
+void youtube_sorting_algo(){
+    string s;
+    getline(cin,s);
+    cin.ignore();
+    char ans[100000];
+    strcpy(ans,s.c_str());
+    vector<string>hello;
+    char* token = strtok(ans,",");
+    while (token != NULL) {
+        hello.pb(token);
+        token = strtok(NULL, ",");
+    }
+    sort(aLL(hello));
+    for(auto i:hello)
+        cout<<i<<"\n";
+}
