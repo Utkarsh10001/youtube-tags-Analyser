@@ -1,0 +1,30 @@
+
+void youtube_sorting_algo(){
+    string s;
+    getline(cin,s);
+    cin.ignore();
+    char ans[1000000];
+    strcpy(ans,s.c_str());
+    vector<string>hello;
+    char* token = strtok(ans,",");
+    while (token != NULL) {
+        hello.pb(token);
+        token = strtok(NULL, ",");
+    }
+    map<string,int>fre;
+    //mapping to occrance
+    set<pair<int,string>,greater<pair<int,string>>>occ;
+    for(auto h:hello){
+        fre[h]++;
+    }
+    for(auto x:fre){
+        occ.insert({x.second,x.first});
+    }
+    for(auto i:occ){
+        cout<<i.second<<",";
+    }
+    //just sorting
+    //sort(aLL(hello));
+    //for(auto i:hello)
+      //  cout<<i<<"\n";
+}
